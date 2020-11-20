@@ -13,4 +13,20 @@
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
+
+    <style name="RatingBar" parent="Widget.AppCompat.RatingBar">
+        <item name="android:progressDrawable"> @drawable/ic_star</item>
+        <item name="minHeight">13dp</item>
+        <item name="maxHeight">13dp</item>
+    </style>
+
+    <style name="heading">
+        <item name="android:fontFamily">@font/roboto_thin</item>
+        <item name="android:layout_weight">900</item>
+        <item name="android:textStyle">normal</item>
+        <item name="lineHeight">40dp</item>
+        <item name="android:textSize">40sp</item>
+    </style>
+
+
 </resources>
