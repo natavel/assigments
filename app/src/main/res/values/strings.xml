@@ -1,8 +1,7 @@
 <resources>
     <string name="app_name">My Application</string>
     <string name="age">13+</string>
-    <string name="movie_avengers">Avengers:</string>
-    <string name="movie_part">End Game</string>
+    <string name="movie_name">Avengers:\nEnd Game</string>
     <string name="gerre">Action, Adventure, Fantasy</string>
     <string name="count_reviews">125 REVIEWS</string>
     <string name="storyline">Storyline</string>

@@ -4,14 +4,15 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/background">
 
     <androidx.constraintlayout.widget.ConstraintLayout
 
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/background"
-        tools:context=".MovieDetailsActivity">
+        tools:context=".MovieDetailsActivity"
+        android:layout_marginBottom="16dp">
 
         <ImageView
             android:id="@+id/poster"
@@ -20,7 +21,6 @@
             android:scaleType="centerCrop"
             android:src="@drawable/poster"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -39,6 +39,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:text="@string/back"
+            android:alpha="0.5"
             android:textAlignment="center"
             android:textColor="@color/white"
             app:layout_constraintBottom_toBottomOf="@+id/iv_arrow_back"
@@ -46,15 +47,16 @@
             app:layout_constraintTop_toTopOf="@+id/iv_arrow_back" />
 
         <TextView
+            android:id="@+id/tv_age"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:layout_marginBottom="12dp"
+            android:layout_marginBottom="56dp"
             android:textSize="12sp"
             android:fontFamily="@font/roboto_bold"
             android:text="@string/age"
             android:textColor="@color/white"
-            app:layout_constraintBottom_toTopOf="@+id/tv_avengers"
+            app:layout_constraintBottom_toBottomOf="@id/poster"
             app:layout_constraintStart_toStartOf="parent" />
 
         <TextView
@@ -64,23 +66,10 @@
             android:layout_marginStart="16dp"
             android:fontFamily="@font/roboto_bold"
             android:textSize="40sp"
-            android:text="@string/movie_avengers"
+            android:text="@string/movie_name"
             android:textColor="@color/white"
-            app:layout_constraintBottom_toBottomOf="@+id/poster"
+            app:layout_constraintTop_toBottomOf="@id/tv_age"
             app:layout_constraintStart_toStartOf="parent" />
-
-        <TextView
-            android:id="@+id/tv_end_game"
-            style="normal"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:fontFamily="@font/roboto_bold"
-            android:text="@string/movie_part"
-            android:textColor="@color/white"
-            android:textSize="40sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/poster" />
 
         <TextView
             android:id="@+id/genre"
@@ -91,7 +80,7 @@
             android:text="@string/gerre"
             android:textColor="@color/red"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_end_game" />
+            app:layout_constraintTop_toBottomOf="@+id/tv_avengers" />
 
 
         <ImageView
@@ -176,6 +165,7 @@
             android:layout_marginHorizontal="16dp"
             android:fontFamily="@font/roboto_condensed_light"
             android:paddingVertical="16dp"
+            android:alpha="0.5"
             android:text="@string/description"
             android:textColor="@color/white"
             app:layout_constraintStart_toStartOf="parent"
@@ -199,6 +189,7 @@
             android:src="@drawable/photo_robert"
             app:layout_constraintTop_toBottomOf="@id/tv_cast"
             app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/iv_second_photo"
             android:layout_marginTop="8dp"
             android:layout_marginStart="16dp"/>
 
@@ -209,6 +200,7 @@
             android:src="@drawable/chris_evans"
             app:layout_constraintTop_toBottomOf="@id/tv_cast"
             app:layout_constraintStart_toEndOf="@id/iv_first_photo"
+            app:layout_constraintEnd_toStartOf="@id/iv_third_photo"
             android:layout_marginTop="8dp"
             android:layout_marginStart="8dp"/>
 
@@ -219,6 +211,7 @@
             android:src="@drawable/mark"
             app:layout_constraintTop_toBottomOf="@id/tv_cast"
             app:layout_constraintStart_toEndOf="@id/iv_second_photo"
+            app:layout_constraintEnd_toStartOf="@id/iv_fourth_photo"
             android:layout_marginTop="8dp"
             android:layout_marginStart="8dp"/>
 
@@ -229,6 +222,7 @@
             android:src="@drawable/chris"
             app:layout_constraintTop_toBottomOf="@id/tv_cast"
             app:layout_constraintStart_toEndOf="@id/iv_third_photo"
+            app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginTop="8dp"
             android:layout_marginStart="8dp"/>
 
@@ -261,7 +255,7 @@
             android:layout_height="wrap_content"
             app:layout_constraintTop_toBottomOf="@id/iv_second_photo"
             android:textColor="@color/gray_for_name"
-            android:fontFamily="@font/roboto_light"
+            android:fontFamily="@font/roboto_bold"
             android:text="@string/mark_ruffalo"
             android:layout_marginTop="6dp"
             app:layout_constraintStart_toStartOf="@id/iv_third_photo"/>
@@ -272,7 +266,6 @@
             android:layout_height="wrap_content"
             app:layout_constraintTop_toBottomOf="@id/iv_second_photo"
             android:textColor="@color/gray_for_name"
-            android:fontFamily="@font/roboto_bold"
             android:text="@string/chris_hemsworth"
             android:layout_marginTop="6dp"
             app:layout_constraintStart_toStartOf="@id/iv_fourth_photo"/>
