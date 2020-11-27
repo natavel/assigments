@@ -11,7 +11,7 @@
 
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".MovieDetailsActivity"
+        tools:context=".FragmentMoviesDetails"
         android:layout_marginBottom="16dp">
 
         <ImageView
@@ -45,6 +45,11 @@
             app:layout_constraintBottom_toBottomOf="@+id/iv_arrow_back"
             app:layout_constraintStart_toEndOf="@id/iv_arrow_back"
             app:layout_constraintTop_toTopOf="@+id/iv_arrow_back" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
 
         <TextView
             android:id="@+id/tv_age"
@@ -187,6 +192,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/photo_robert"
+
             app:layout_constraintTop_toBottomOf="@id/tv_cast"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toStartOf="@id/iv_second_photo"
@@ -228,7 +234,8 @@
 
         <TextView
             android:id="@+id/first_name"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
+            android:maxLines="2"
             android:layout_height="wrap_content"
             app:layout_constraintTop_toBottomOf="@id/iv_first_photo"
             app:layout_constraintStart_toStartOf="parent"
@@ -240,7 +247,8 @@
 
         <TextView
             android:id="@+id/second_name"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
+            android:maxLines="2"
             android:layout_height="wrap_content"
             app:layout_constraintTop_toBottomOf="@id/iv_second_photo"
             android:textColor="@color/gray_for_name"
@@ -251,7 +259,8 @@
 
         <TextView
             android:id="@+id/third_name"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
+            android:maxLines="2"
             android:layout_height="wrap_content"
             app:layout_constraintTop_toBottomOf="@id/iv_second_photo"
             android:textColor="@color/gray_for_name"
@@ -262,7 +271,8 @@
 
         <TextView
             android:id="@+id/fourth_name"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
+            android:maxLines="2"
             android:layout_height="wrap_content"
             app:layout_constraintTop_toBottomOf="@id/iv_second_photo"
             android:textColor="@color/gray_for_name"

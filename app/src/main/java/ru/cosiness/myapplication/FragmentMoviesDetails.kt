@@ -3,9 +3,9 @@ package ru.cosiness.myapplication
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 
-class MovieDetailsActivity : AppCompatActivity() {
+class FragmentMoviesDetails : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_movie_details)
+        setContentView(R.layout.fragment_movie_details)
     }
 }
